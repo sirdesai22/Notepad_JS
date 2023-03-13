@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+    background: #252525;
+}
+
+#app{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    padding: 24px;
+    gap: 24px;
+}
+
+.note{
+    height: 200px;
+    box-sizing: border-box;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(255, 111, 0);
+    resize: none;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+
+.add-note{
+    height: 200px;
+    border: none;
+    outline: none;
+    background: rgb(255, 111, 0);
+    border-radius: 10px;
+    font-size: 120px;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.add-note:hover{
+    background: rgb(202, 88, 0);
+}
+
+@media only screen and (max-width: 950px)
+{
+    #app{
+        justify-content: center;
+        grid-template-columns: repeat(auto-fill, 300px);
+    }
+
+    .note{
+        height: 300px;
+        font-size: 30px;
+    }
+    
+    .add-note{
+        height: 300px;
+    }
+}
